@@ -1,0 +1,1 @@
+export { default as DivtTextEditor } from './components/DivtTextEditor/DivtTextEditor';

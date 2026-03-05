@@ -1,0 +1,156 @@
+/* Basic styling for the editor container */
+.divt-editor-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .divt-editor-toolbar {
+    background-color: #f5f5f5;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .divt-editor-toolbar button {
+    padding: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 4px;
+    color: #374151;
+    transition: all 0.2s;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .divt-editor-toolbar button:hover {
+    background: #e5e7eb;
+    color: #111827;
+  }
+  
+  .divt-editor-toolbar button.is-active {
+    background: #d1d5db;
+    border-color: #9ca3af;
+    color: #2563eb;
+  }
+
+  /* Styling the editable area */
+  .divt-editor-content .ProseMirror {
+    padding: 16px;
+    min-height: 200px;
+    outline: none;
+  }
+  
+  .divt-editor-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .divt-editor-content iframe {
+    max-width: 100%;
+  }
+
+  /* =========================================
+   TIPTAP TABLE STYLES
+   ========================================= */
+.divt-editor-content .ProseMirror table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .divt-editor-content .ProseMirror table td,
+  .divt-editor-content .ProseMirror table th {
+    min-width: 1em;
+    border: 1px solid #ced4da; /* Table border color */
+    padding: 8px 12px;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .divt-editor-content .ProseMirror table th {
+    font-weight: bold;
+    text-align: left;
+    background-color: #f8f9fa; /* Header background color */
+  }
+  
+  /* Visual effect when selecting multiple cells */
+  .divt-editor-content .ProseMirror table .selectedCell:after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: rgba(200, 200, 255, 0.4);
+    pointer-events: none;
+  }
+  
+  /* Blue indicator when resizing columns */
+  .divt-editor-content .ProseMirror table .column-resize-handle {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    bottom: -2px;
+    width: 4px;
+    background-color: #adf;
+    pointer-events: none;
+  }
+  
+  /* Cursor change when hovering over borders for resizing */
+  .divt-editor-content .ProseMirror.resize-cursor {
+    cursor: ew-resize;
+    cursor: col-resize;
+  }
+
+  /* =========================================
+   CUSTOM COLOR PICKER STYLES
+   ========================================= */
+.custom-color-picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .custom-color-picker:hover {
+    background: #e5e7eb;
+  }
+  
+  /* Hide the default HTML color input UI but keep it functional */
+  .color-picker-input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    border: none;
+    padding: 0;
+  }
+
+  /* =========================================
+   LINK STYLES
+   ========================================= */
+.divt-editor-content a {
+    color: #2563eb; /* Màu xanh chuẩn web */
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .divt-editor-content a:hover {
+    color: #1d4ed8; /* Đậm hơn khi hover */
+  }
+  

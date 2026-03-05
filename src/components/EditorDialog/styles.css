@@ -1,0 +1,107 @@
+/* src/components/EditorDialog/styles.css */
+.divt-dialog-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 8px;
+  }
+  
+  .divt-dialog-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    animation: dialogFadeIn 0.2s ease-out;
+  }
+  
+  @keyframes dialogFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .divt-dialog-title {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .divt-dialog-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .divt-dialog-body label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+    gap: 4px;
+  }
+  
+  .divt-dialog-body input {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .divt-dialog-body input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  .divt-dialog-row {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .divt-dialog-row label {
+    flex: 1;
+  }
+  
+  .divt-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .divt-dialog-footer button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-cancel {
+    background-color: #f3f4f6;
+    color: #374151;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .btn-submit {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .btn-submit:hover {
+    background-color: #1d4ed8;
+  }
