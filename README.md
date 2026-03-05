@@ -22,4 +22,4 @@ A professional, high-performance Rich Text Editor built with **React**, **Tiptap
 Since this library is hosted on GitHub, you can install it directly:
 
 ```bash
-npm install [https://github.com/your-username/divt-text-editor.git](https://github.com/your-username/divt-text-editor.git)
+npm install [https://github.com/votuandi/divt-text-editor.git](https://github.com/votuandi/divt-text-editor.git)
