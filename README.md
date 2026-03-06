@@ -33,6 +33,10 @@ npm install github:votuandi/divt-text-editor#v0.1.0
 
 ## 🚀 Usage in Next.js
 
+> **📌 Using Next.js 15?** 
+> - **Quick Start**: [5-Minute Setup Guide](./NEXTJS15_QUICKSTART.md)
+> - **Detailed Guide**: [Next.js 15 Compatibility Guide](./NEXTJS15_COMPATIBILITY.md)
+
 ### Next.js 13+ (App Router)
 
 Create a client-side wrapper component:
@@ -287,6 +291,22 @@ import 'divt-text-editor/style.css';
 // Don't do this!
 import DivtTextEditor from 'divt-text-editor/src/components/DivtTextEditor/DivtTextEditor.jsx';
 ```
+
+### Next.js 15 Rolldown Bundler Issues
+
+If you encounter errors with Next.js 15's new Rolldown bundler:
+
+**Quick Fix**: Add to your `next.config.js`:
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['divt-text-editor'],
+};
+
+module.exports = nextConfig;
+```
+
+For detailed solutions, see [NEXTJS15_COMPATIBILITY.md](./NEXTJS15_COMPATIBILITY.md).
 
 ### Next.js SSR Issues
 
