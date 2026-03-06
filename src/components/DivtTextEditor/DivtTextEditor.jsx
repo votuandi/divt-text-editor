@@ -92,6 +92,7 @@ const DivtTextEditor = ({ content = '', onChange, uploadEndpoint }) => {
         onUpdate: ({ editor }) => {
             if (onChange) onChange(editor.getHTML());
         },
+        immediatelyRender: false, // Fix for Next.js 15 SSR hydration
     });
 
     // -------------------------------------------------------------
