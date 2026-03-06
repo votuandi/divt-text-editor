@@ -1,0 +1,30 @@
+# Development files
+src/
+public/
+.storybook/
+storybook-static/
+
+# Config files
+vite.config.js
+eslint.config.js
+.github/
+
+# Documentation
+*.md
+!README.md
+
+# Tests and stories
+**/*.stories.js
+**/*.stories.jsx
+**/*.test.js
+**/*.test.jsx
+
+# Development dependencies
+node_modules/
+.vscode/
+.idea/
+
+# Misc
+*.log
+.DS_Store
+index.html

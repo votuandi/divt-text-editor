@@ -1,6 +1,5 @@
 {
   "name": "divt-text-editor",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/divt-text-editor.umd.js",
@@ -26,8 +25,24 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votuandi/divt-text-editor.git"
+  },
+  "keywords": [
+    "react",
+    "editor",
+    "rich-text-editor",
+    "tiptap",
+    "wysiwyg",
+    "nextjs",
+    "text-editor"
+  ],
+  "author": "votuandi",
+  "license": "MIT",
   "dependencies": {
     "@tiptap/extension-color": "^3.20.0",
     "@tiptap/extension-highlight": "^3.20.0",
