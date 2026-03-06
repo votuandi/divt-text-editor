@@ -5,8 +5,8 @@ import { Image as D } from "@tiptap/extension-image";
 import { Youtube as E } from "@tiptap/extension-youtube";
 import { Underline as O } from "@tiptap/extension-underline";
 import { TextAlign as B } from "@tiptap/extension-text-align";
-import { Table as U } from "@tiptap/extension-table";
-import { TableRow as R } from "@tiptap/extension-table-row";
+import { Table as R } from "@tiptap/extension-table";
+import { TableRow as U } from "@tiptap/extension-table-row";
 import { TableCell as V } from "@tiptap/extension-table-cell";
 import { TableHeader as P } from "@tiptap/extension-table-header";
 import { Color as Y } from "@tiptap/extension-color";
@@ -228,8 +228,8 @@ var me = k.create({
       M,
       O,
       B.configure({ types: ["heading", "paragraph"] }),
-      U.configure({ resizable: !0 }),
-      R,
+      R.configure({ resizable: !0 }),
+      U,
       P,
       V,
       D,
@@ -248,7 +248,8 @@ var me = k.create({
     content: i,
     onUpdate: ({ editor: n }) => {
       s && s(n.getHTML());
-    }
+    },
+    immediatelyRender: !1
   }), m = f(() => {
     const n = document.createElement("input");
     n.type = "file", n.accept = "image/*,video/*", n.onchange = async (a) => {

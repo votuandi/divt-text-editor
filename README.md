@@ -308,9 +308,20 @@ module.exports = nextConfig;
 
 For detailed solutions, see [NEXTJS15_COMPATIBILITY.md](./NEXTJS15_COMPATIBILITY.md).
 
-### Next.js SSR Issues
+### Next.js 15 SSR Hydration Error
 
-If you encounter errors during server-side rendering:
+If you see this error:
+```
+Tiptap Error: SSR has been detected, please set `immediatelyRender` explicitly to `false`
+```
+
+**Solution**: This has been fixed in v0.1.5+. Make sure you're using the latest version:
+
+```bash
+npm install github:votuandi/divt-text-editor
+```
+
+If you still encounter the error, ensure you're using the component correctly:
 - Use `'use client'` directive in Next.js 13+ App Router
 - Use `dynamic` import with `ssr: false` in Pages Router (see usage examples above)
 
