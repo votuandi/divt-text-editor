@@ -229,7 +229,45 @@ npm run storybook
 
 ## ⚠️ Troubleshooting
 
-### Module Not Found Error
+### Module Not Found: dist folder missing
+
+If you see an error like:
+```
+Module not found: Can't resolve 'divt-text-editor'
+Error: Cannot find module './dist/divt-text-editor.es.js'
+```
+
+**Cause**: When installing directly from GitHub, the package doesn't include pre-built files. The `dist` folder needs to be built locally.
+
+**Solution**: Build the package after installation:
+
+```bash
+# Navigate to the package directory
+cd node_modules/divt-text-editor
+
+# Install dependencies
+npm install
+
+# Build the package
+npm run build
+
+# Return to your project root
+cd ../..
+```
+
+**Alternative Solution - Using postinstall script**: Add this to your project's `package.json`:
+
+```json
+{
+  "scripts": {
+    "postinstall": "cd node_modules/divt-text-editor && npm install && npm run build || true"
+  }
+}
+```
+
+This will automatically build the package after every `npm install`.
+
+### Module Not Found Error (Wrong Import Path)
 
 If you see an error like:
 ```

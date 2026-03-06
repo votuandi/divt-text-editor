@@ -8,7 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist - IMPORTANT: Do NOT ignore dist folder!
+# The dist folder must be committed for GitHub package installations to work.
+# When users install via "npm install github:votuandi/divt-text-editor",
+# they need the pre-built files since npm doesn't run build scripts.
 dist-ssr
 *.local
 
