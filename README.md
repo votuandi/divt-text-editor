@@ -227,6 +227,35 @@ npm run build
 npm run storybook
 ```
 
+## ⚠️ Troubleshooting
+
+### Module Not Found Error
+
+If you see an error like:
+```
+Module not found: Package path ./src/components/DivtTextEditor/DivtTextEditor.jsx is not exported
+```
+
+**Solution**: Make sure you're importing from the package root, NOT from internal source paths:
+
+✅ **Correct:**
+```tsx
+import { DivtTextEditor } from 'divt-text-editor';
+import 'divt-text-editor/style.css';
+```
+
+❌ **Incorrect:**
+```tsx
+// Don't do this!
+import DivtTextEditor from 'divt-text-editor/src/components/DivtTextEditor/DivtTextEditor.jsx';
+```
+
+### Next.js SSR Issues
+
+If you encounter errors during server-side rendering:
+- Use `'use client'` directive in Next.js 13+ App Router
+- Use `dynamic` import with `ssr: false` in Pages Router (see usage examples above)
+
 ## 📄 License
 
 MIT

@@ -4,16 +4,19 @@
   "type": "module",
   "main": "./dist/divt-text-editor.umd.js",
   "module": "./dist/divt-text-editor.es.js",
+  "types": "./index.d.ts",
   "style": "./dist/style.css",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./dist/divt-text-editor.es.js",
       "require": "./dist/divt-text-editor.umd.js"
     },
     "./style.css": "./dist/style.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "peerDependencies": {
     "react": "^18.0.0",
